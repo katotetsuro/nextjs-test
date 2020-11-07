@@ -1,5 +1,5 @@
 const Foo = () => {
-    return <div>hello</div>
+    return <div>chunk modified</div>
 }
 
 export default Foo;
