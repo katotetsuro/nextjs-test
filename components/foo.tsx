@@ -1,5 +1,5 @@
 const Foo = () => {
-    return <div>chunk modified</div>
+    return <div>ver1</div>
 }
 
 export default Foo;
