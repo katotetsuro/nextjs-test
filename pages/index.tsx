@@ -1,3 +1,6 @@
+import { lazy } from 'react'
+import Link from 'next/link'
+
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
@@ -18,6 +21,11 @@ const Index = ({ allPosts }: Props) => {
   return (
     <>
       <Layout>
+        <div>
+          <Link as='/test' href='/test'>
+            load another chunk
+        </Link>
+        </div>
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
