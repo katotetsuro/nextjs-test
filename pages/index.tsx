@@ -12,6 +12,7 @@ import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import Post from '../types/post'
+import Avatar from '../components/avatar'
 
 type Props = {
   allPosts: Post[]
@@ -22,27 +23,27 @@ const Foo = dynamic(() => import('../components/foo'));
 const Index = ({ allPosts }: Props) => {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   return (
     <>
       <Layout>
-        <div>
+        {/* <div>
           <button onClick={() => { setShow(!show) }}>load another chunk</button>
           { show  && <Foo />}
-        </div>
+        </div> */}
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>katotetsuro memo</title>
         </Head>
         <Container>
           <Intro />
+          <div className="block mb-6">
+            <Avatar name='katotetsuro' picture='/assets/blog/authors/icon.jpeg' />
+          </div>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
-              coverImage={heroPost.coverImage}
               date={heroPost.date}
-              author={heroPost.author}
               slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
