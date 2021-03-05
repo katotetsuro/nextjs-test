@@ -33,14 +33,9 @@ const Post = ({ post, morePosts, preview }: Props) => {
           <>
             <article className="mb-32">
               <Head>
-                <title>
-                  {post.title}
-                </title>
+                <title>{post.title}</title>
               </Head>
-              <PostHeader
-                title={post.title}
-                date={post.date}
-              />
+              <PostHeader title={post.title} date={post.date} />
               <PostBody content={post.content} />
             </article>
           </>
@@ -59,12 +54,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'content',
-  ])
+  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'content'])
   const content = await markdownToHtml(post.content || '')
 
   return {

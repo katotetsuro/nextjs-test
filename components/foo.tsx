@@ -1,5 +1,5 @@
 const Foo = () => {
-    return <div>ver2!</div>
+  return <div>ver2!</div>
 }
 
-export default Foo;
+export default Foo

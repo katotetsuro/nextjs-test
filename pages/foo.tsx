@@ -1,5 +1,5 @@
 function Index() {
-    return <div>foo.tsx</div>
+  return <div>foo.tsx</div>
 }
 
-export default Index;
+export default Index

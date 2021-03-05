@@ -1,7 +1,7 @@
-import Foo from "../../components/foo"
+import Foo from '../../components/foo'
 
 const Index = () => {
-    return <Foo />
+  return <Foo />
 }
 
-export default Index;
+export default Index
