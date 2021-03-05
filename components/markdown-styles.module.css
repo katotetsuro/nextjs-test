@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply leading-relaxed;
 }
 
 .markdown p,
@@ -15,4 +15,13 @@
 
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown pre {
+  background-color: #f0f0f0;
+}
+
+.markdown code {
+  @apply text-sm;
+  background-color: #f0f0f0;
 }
