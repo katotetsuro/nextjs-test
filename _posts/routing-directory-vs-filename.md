@@ -14,3 +14,5 @@ warn  - Duplicate page detected. pages/foo/index.tsx and pages/foo.ts both resol
 ```
 
 ちなみに `/foo` にアクセスすると `foo.tsx` が表示された。
+
+`next export` してS3だけで運用したい、みたいなときに影響があるかもしれない？
