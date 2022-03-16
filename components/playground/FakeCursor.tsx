@@ -1,5 +1,5 @@
 import { css } from '@emotion/css'
-import { useCallback, MouseEvent, useRef, useState, useEffect } from 'react'
+import { useCallback, MouseEvent, useRef, useState } from 'react'
 import { useAnimationFrame } from '../../hooks/useAnimationFrame'
 
 type ButtonProps = {
