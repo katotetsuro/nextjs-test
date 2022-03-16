@@ -1,6 +1,7 @@
 import { css } from '@emotion/css'
 import { useCallback, MouseEvent, useRef, useState } from 'react'
 import { useAnimationFrame } from '../../hooks/useAnimationFrame'
+import { Howl } from 'howler'
 
 type ButtonProps = {
   mouseX: number
@@ -31,7 +32,20 @@ const AttractiveButton = (props: ButtonProps) => {
     ${baseStyle};
     ${props.hovering ? 'background-color: yellow;' : ''}
   `
-  return <div className={style}>Button</div>
+
+  const onClick = useCallback(() => {
+    const h = new Howl({
+      src:
+        'https://mp3test-temp.s3.ap-northeast-1.amazonaws.com/1_bdb6a012de3245c06f920182580f0e3b.mp3',
+      format: ['wav', 'mp3', 'mpeg'],
+    })
+    h.play()
+  }, [])
+  return (
+    <div className={style} onClick={onClick}>
+      Button
+    </div>
+  )
 }
 
 const BaseCursorStyle = css`
